@@ -114,7 +114,7 @@ service nova-consoleauth restart
 service nova-scheduler restart
 service nova-conductor restart
 service nova-novncproxy restart
-service nova-computer restart
+service nova-compute restart
 sleep 7 
 echo "########## Restarting NOVA ... ##########"
 service nova-api restart
@@ -123,7 +123,7 @@ service nova-consoleauth restart
 service nova-scheduler restart
 service nova-conductor restart
 service nova-novncproxy restart
-service nova-computer restart
+service nova-compute restart
 
 
 echo "########## Testing NOVA service ##########"
