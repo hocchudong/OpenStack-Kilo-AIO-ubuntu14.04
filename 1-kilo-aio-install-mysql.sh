@@ -16,7 +16,6 @@ sleep 3
 echo "########## CONFIGURING FOR MYSQL ##########"
 sleep 5
 sed -i 's/127.0.0.1/0.0.0.0/g' /etc/mysql/my.cnf
-echo 'max_connections = 100000' >> /etc/mysql/my.cnf
 sed -i -e '78imax_connections = 100000\' /etc/mysql/my.cnf
 
 #
