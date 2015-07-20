@@ -33,7 +33,7 @@ echo "##### Create OPS DATABASE #####"
 sleep 3
 
 cat << EOF | mysql -uroot -p$MYSQL_PASS
-SET GLOBAL max_connections = 5000;
+SET GLOBAL max_connections = 100000;
 
 DROP DATABASE IF EXISTS keystone;
 DROP DATABASE IF EXISTS glance;
