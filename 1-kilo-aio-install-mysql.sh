@@ -16,7 +16,6 @@ sleep 3
 echo "########## CONFIGURING FOR MYSQL ##########"
 sleep 5
 sed -i 's/127.0.0.1/0.0.0.0/g' /etc/mysql/my.cnf
-echo 'max_connections = 100000' >> /etc/mysql/my.cnf
 sed -i -e '78imax_connections = 100000\' /etc/mysql/my.cnf
 
 #
@@ -34,7 +33,7 @@ echo "##### Create OPS DATABASE #####"
 sleep 3
 
 cat << EOF | mysql -uroot -p$MYSQL_PASS
-SET GLOBAL max_connections = 5000;
+SET GLOBAL max_connections = 100000;
 
 DROP DATABASE IF EXISTS keystone;
 DROP DATABASE IF EXISTS glance;
